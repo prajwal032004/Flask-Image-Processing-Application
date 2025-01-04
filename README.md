@@ -1,6 +1,6 @@
 # 🖼️ Image Filter Web Application
 
-A powerful and user-friendly web application that allows users to apply various filters and enhancements to their images. Built with Python Flask and PIL (Python Imaging Library).
+A powerful and user-friendly web application that allows users to apply various filters and enhancements to their images. Built with Python Flask and PIL(Pillow) (Python Imaging Library).
 
 ## 🌟 Key Features
 
@@ -144,7 +144,7 @@ This project is licensed under the Self License.
 - [Pillow](https://python-pillow.org/)
 - [Werkzeug](https://werkzeug.palletsprojects.com/)
 
-## 📞 Contact & Support
+## 🛫 Reach Me
 
 - Creator: [Prajwal A Bhandagi](https://github.com/prajwal032004)
 
