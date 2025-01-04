@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.upload-container,
+.editor-container {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.file-input-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.file-input-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.file-input-wrapper label {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-input-wrapper:hover label {
+    background-color: #2980b9;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #27ae60;
+}
+
+#editor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image-container {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+#image {
+    max-width: 100%;
+    height: auto;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.slider {
+    width: 200px;
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #2980b9;
+}
+
+#save-button {
+    background-color: #e74c3c;
+}
+
+#save-button:hover {
+    background-color: #c0392b;
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Flask Photo Editor</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .upload-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .file-input-wrapper input[type=file] {
+            font-size: 100px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .file-input-wrapper label {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: #fff;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .file-input-wrapper:hover label {
+            background-color: #2980b9;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 12px;
+            background: #2ecc71;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background: #27ae60;
+        }
+
+        #image-preview {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #image-preview img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px 0;
+            background-color: #2c3e50;
+            color: #fff;
+        }
+
+        footer a {
+            color: #3498db;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Enhanced Flask Photo Editor</h1>
+        <div class="upload-container">
+            <form action="{{ url_for('index') }}" method="post" enctype="multipart/form-data">
+                <div class="file-input-wrapper">
+                    <input type="file" name="file" id="file" accept="image/*" required>
+                    <label for="file">Choose an image</label>
+                </div>
+                <div id="image-preview"></div>
+                <button type="submit">Upload & Edit</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 <a href="https://prajwalpdf.pythonanywhere.com/">Prajwal A Bhandagi</a>. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const fileInput = document.getElementById('file');
+        const imagePreview = document.getElementById('image-preview');
+
+        fileInput.addEventListener('change', () => {
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    imagePreview.innerHTML = `<img src="${e.target.result}" alt="Selected Image">`;
+                };
+                reader.readAsDataURL(file);
+            } else {
+                imagePreview.innerHTML = '';
+            }
+        });
+    </script>
+</body>
+
+</html>
