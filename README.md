@@ -50,14 +50,15 @@ Virtual environment (recommended)
 ### Installation Steps
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/image-filter-app.git
-cd image-filter-app
+[git clone https://github.com/yourusername/image-filter-app.git](https://github.com/prajwal032004/Flask-Image-Processing-Application.git)
+cd Flask-Image-Processing-Application
 ```
 
 2. Set up virtual environment:
 ```bash
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
+source venv/bin/activate
+# On Windows: venv\Scripts\activate
 ```
 
 3. Install dependencies:
